@@ -3,7 +3,7 @@
  */
 export const DEFAULT_DIRECTORIES = {
 	/** Main backlog directory */
-	BACKLOG: "backlog",
+	BACKLOG: "backlogsession",
 	/** Active tasks directory */
 	TASKS: "tasks",
 	/** Draft tasks directory */

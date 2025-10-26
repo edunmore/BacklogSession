@@ -1,4 +1,4 @@
-import type { Core } from "../core/backlog.ts";
+import type { Core } from "../core/backlogsession.ts";
 
 /**
  * Shared utilities for building tasks and validating dependencies

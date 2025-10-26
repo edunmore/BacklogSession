@@ -2,7 +2,7 @@
  * Enhanced views with Tab key switching between task views and kanban board
  */
 
-import type { Core } from "../core/backlog.ts";
+import type { Core } from "../core/backlogsession.ts";
 import type { TaskWithMetadata } from "../core/remote-tasks.ts";
 import type { Task } from "../types/index.ts";
 import { renderBoardTui } from "./board.ts";
@@ -179,7 +179,7 @@ async function renderBoardTuiWithSwitching(
 	},
 ): Promise<void> {
 	// Get config for layout and column width
-	const core = new (await import("../core/backlog.ts")).Core(process.cwd());
+	const core = new (await import("../core/backlogsession.ts")).Core(process.cwd());
 	const config = await core.filesystem.loadConfig();
 	const layout = "horizontal" as const; // Default layout
 	const maxColumnWidth = config?.maxColumnWidth || 20;

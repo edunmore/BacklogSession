@@ -2,7 +2,7 @@ import { afterEach, beforeEach, describe, expect, it, test } from "bun:test";
 import { mkdir, rm } from "node:fs/promises";
 import { join } from "node:path";
 import { $ } from "bun";
-import { Core } from "../core/backlog.ts";
+import { Core } from "../core/backlogsession.ts";
 import { AcceptanceCriteriaManager } from "../markdown/structured-sections.ts";
 import { createUniqueTestDir, safeCleanup } from "./test-utils.ts";
 

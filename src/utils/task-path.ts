@@ -1,5 +1,5 @@
 import { join } from "node:path";
-import { Core } from "../core/backlog.ts";
+import { Core } from "../core/backlogsession.ts";
 
 // Interface for task path resolution context
 interface TaskPathContext {

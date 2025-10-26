@@ -1,7 +1,7 @@
 import type { BoxInterface, ListInterface } from "neo-neo-bblessed";
 import { box, list } from "neo-neo-bblessed";
 import { type BoardLayout, buildKanbanStatusGroups, generateKanbanBoardWithMetadata } from "../board.ts";
-import { Core } from "../core/backlog.ts";
+import { Core } from "../core/backlogsession.ts";
 import type { Task } from "../types/index.ts";
 import { getTaskPath } from "../utils/task-path.ts";
 import { compareTaskIds } from "../utils/task-sorting.ts";

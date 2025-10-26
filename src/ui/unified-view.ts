@@ -2,7 +2,7 @@
  * Unified view manager that handles Tab switching between task views and kanban board
  */
 
-import type { Core } from "../core/backlog.ts";
+import type { Core } from "../core/backlogsession.ts";
 import type { Task } from "../types/index.ts";
 import { watchConfig } from "../utils/config-watcher.ts";
 import { watchTasks } from "../utils/task-watcher.ts";

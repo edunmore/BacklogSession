@@ -9,7 +9,7 @@ import {
 	ListToolsRequestSchema,
 	ReadResourceRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
-import { Core } from "../core/backlog.ts";
+import { Core } from "../core/backlogsession.ts";
 import { getPackageName } from "../utils/app-info.ts";
 import { getVersion } from "../utils/version.ts";
 import { registerWorkflowResources } from "./resources/workflow/index.ts";
@@ -30,14 +30,14 @@ import type {
 /**
  * Minimal MCP server implementation for stdio transport.
  *
- * The Backlog.md MCP server is intentionally local-only and exposes tools,
+ * The backlogsession.md MCP server is intentionally local-only and exposes tools,
  * resources, and prompts through the stdio transport so that desktop editors
  * (e.g. Claude Code) can interact with a project without network exposure.
  */
 const APP_NAME = getPackageName();
 const APP_VERSION = await getVersion();
 const INSTRUCTIONS_POINTER =
-	"At the beginning of each session, read the backlog://workflow/overview resource to understand when and how to use Backlog.md for task management. Additional detailed guides are available as resources when needed.";
+	"At the beginning of each session, read the backlogsession://workflow/overview resource to understand when and how to use backlogsession.md for task management. Additional detailed guides are available as resources when needed.";
 
 type ServerInitOptions = {
 	debug?: boolean;
@@ -253,7 +253,7 @@ export async function createMcpServer(projectRoot: string, options: ServerInitOp
 
 	const config = await server.filesystem.loadConfig();
 	if (!config) {
-		throw new Error("Failed to load backlog configuration");
+		throw new Error("Failed to load backlogsession configuration");
 	}
 
 	registerTaskTools(server, config);

@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, mock } from "bun:test";
 import { $ } from "bun";
-import { Core } from "../core/backlog.ts";
+import { Core } from "../core/backlogsession.ts";
 import type { BacklogConfig, Task } from "../types/index.ts";
 import { createUniqueTestDir, safeCleanup } from "./test-utils.ts";
 

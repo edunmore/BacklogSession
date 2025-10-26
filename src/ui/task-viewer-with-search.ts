@@ -9,7 +9,7 @@ import type {
 	ScrollableTextInterface,
 } from "neo-neo-bblessed";
 import { box, line, list, scrollabletext, textbox } from "neo-neo-bblessed";
-import { Core } from "../core/backlog.ts";
+import { Core } from "../core/backlogsession.ts";
 import {
 	buildAcceptanceCriteriaItems,
 	formatDateForDisplay,

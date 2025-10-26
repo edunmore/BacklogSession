@@ -1,5 +1,5 @@
 {
-	"name": "backlog.md",
+	"name": "backlogsession.md",
 	"version": "1.16.5",
 	"type": "module",
 	"files": [
@@ -8,14 +8,14 @@
 		"LICENSE"
 	],
 	"bin": {
-		"backlog": "scripts/cli.cjs"
+		"backlogsession": "scripts/cli.cjs"
 	},
 	"optionalDependencies": {
-		"backlog.md-darwin-arm64": "*",
-		"backlog.md-darwin-x64": "*",
-		"backlog.md-linux-arm64": "*",
-		"backlog.md-linux-x64": "*",
-		"backlog.md-windows-x64": "*"
+		"backlogsession.md-darwin-arm64": "*",
+		"backlogsession.md-darwin-x64": "*",
+		"backlogsession.md-linux-arm64": "*",
+		"backlogsession.md-linux-x64": "*",
+		"backlogsession.md-windows-x64": "*"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.2.4",
@@ -51,7 +51,7 @@
 		"check:types": "bunx tsc --noEmit",
 		"prepare": "husky",
 		"build:css": "bun ./node_modules/@tailwindcss/cli/dist/index.mjs -i src/web/styles/source.css -o src/web/styles/style.css --minify",
-		"build": "bun run build:css && bun build --production --compile --minify --outfile=dist/backlog src/cli.ts",
+		"build": "bun run build:css && bun build --production --compile --minify --outfile=dist/backlogsession src/cli.ts",
 		"cli": "bun run build:css && bun src/cli.ts",
 		"mcp": "bun src/cli.ts mcp start",
 		"update-nix": "sh scripts/update-nix.sh",
@@ -76,14 +76,14 @@
 	"bugs": {
 		"url": "https://github.com/MrLesk/Backlog.md/issues"
 	},
-	"homepage": "https://backlog.md",
+	"homepage": "https://backlogsession.md",
 	"keywords": [
 		"cli",
 		"markdown",
 		"kanban",
 		"task",
 		"project-management",
-		"backlog",
+		"backlogsession",
 		"agents"
 	],
 	"license": "MIT",

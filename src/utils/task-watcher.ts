@@ -1,6 +1,6 @@
 import { type FSWatcher, watch } from "node:fs";
 import { join } from "node:path";
-import type { Core } from "../core/backlog.ts";
+import type { Core } from "../core/backlogsession.ts";
 import type { Task } from "../types/index.ts";
 
 export interface TaskWatcherCallbacks {

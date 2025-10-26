@@ -2,7 +2,7 @@
  * Simplified unified view that manages a single screen for Tab switching
  */
 
-import type { Core } from "../core/backlog.ts";
+import type { Core } from "../core/backlogsession.ts";
 import type { TaskWithMetadata } from "../core/remote-tasks.ts";
 import type { Task } from "../types/index.ts";
 import { renderBoardTui } from "./board.ts";

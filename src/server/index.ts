@@ -1,6 +1,6 @@
 import type { Server, ServerWebSocket } from "bun";
 import { $ } from "bun";
-import { Core } from "../core/backlog.ts";
+import { Core } from "../core/backlogsession.ts";
 import type { ContentStore } from "../core/content-store.ts";
 import type { SearchService } from "../core/search-service.ts";
 import { getTaskStatistics } from "../core/statistics.ts";

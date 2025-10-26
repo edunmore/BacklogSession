@@ -1,4 +1,4 @@
-import type { Core } from "../core/backlog.ts";
+import type { Core } from "../core/backlogsession.ts";
 import type { BacklogConfig } from "../types/index.ts";
 import { type PromptRunner, runAdvancedConfigWizard } from "./advanced-config-wizard.ts";
 

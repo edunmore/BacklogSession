@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it } from "bun:test";
 import { mkdir, rm } from "node:fs/promises";
 import { $ } from "bun";
-import { Core } from "../core/backlog.ts";
+import { Core } from "../core/backlogsession.ts";
 import { type ViewState, ViewSwitcher } from "../ui/view-switcher.ts";
 import { createUniqueTestDir, safeCleanup } from "./test-utils.ts";
 

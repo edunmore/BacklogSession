@@ -1,7 +1,7 @@
 import { describe, expect, it } from "bun:test";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { Core } from "../core/backlog.ts";
+import { Core } from "../core/backlogsession.ts";
 import type { BacklogConfig, Task } from "../types/index.ts";
 
 describe("Board loading with checkActiveBranches config", () => {

@@ -1,5 +1,5 @@
 import { type FSWatcher, watch } from "node:fs";
-import type { Core } from "../core/backlog.ts";
+import type { Core } from "../core/backlogsession.ts";
 import type { BacklogConfig } from "../types/index.ts";
 
 export interface ConfigWatcherCallbacks {

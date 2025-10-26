@@ -5,7 +5,7 @@
 
 import { join } from "node:path";
 import { $ } from "bun";
-import { Core } from "../core/backlog.ts";
+import { Core } from "../core/backlogsession.ts";
 import type { TaskCreateInput, TaskUpdateInput } from "../types/index.ts";
 import { normalizeDependencies } from "../utils/task-builders.ts";
 

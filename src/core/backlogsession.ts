@@ -237,8 +237,8 @@ export class Core {
 	}
 
 	private async getBacklogDirectoryName(): Promise<string> {
-		// Always use "backlog" as the directory name
-		return DEFAULT_DIRECTORIES.BACKLOG;
+		// Always use "backlogsession" as the directory name
+		return "backlogsession";
 	}
 
 	async shouldAutoCommit(overrideValue?: boolean): Promise<boolean> {
@@ -1036,7 +1036,7 @@ export class Core {
 		if (success && (await this.shouldAutoCommit(autoCommit))) {
 			// Stage the file move for proper Git tracking
 			await this.git.stageFileMove(fromPath, toPath);
-			await this.git.commitChanges(`backlog: Archive task ${taskId}`);
+			await this.git.commitChanges(`backlogsession: Archive task ${taskId}`);
 		}
 
 		return success;
@@ -1058,7 +1058,7 @@ export class Core {
 		if (success && (await this.shouldAutoCommit(autoCommit))) {
 			// Stage the file move for proper Git tracking
 			await this.git.stageFileMove(fromPath, toPath);
-			await this.git.commitChanges(`backlog: Complete task ${taskId}`);
+			await this.git.commitChanges(`backlogsession: Complete task ${taskId}`);
 		}
 
 		return success;
@@ -1087,7 +1087,7 @@ export class Core {
 		if (success && (await this.shouldAutoCommit(autoCommit))) {
 			const backlogDir = await this.getBacklogDirectoryName();
 			await this.git.stageBacklogDirectory(backlogDir);
-			await this.git.commitChanges(`backlog: Archive draft ${taskId}`);
+			await this.git.commitChanges(`backlogsession: Archive draft ${taskId}`);
 		}
 
 		return success;
@@ -1099,7 +1099,7 @@ export class Core {
 		if (success && (await this.shouldAutoCommit(autoCommit))) {
 			const backlogDir = await this.getBacklogDirectoryName();
 			await this.git.stageBacklogDirectory(backlogDir);
-			await this.git.commitChanges(`backlog: Promote draft ${taskId}`);
+			await this.git.commitChanges(`backlogsession: Promote draft ${taskId}`);
 		}
 
 		return success;
@@ -1111,7 +1111,7 @@ export class Core {
 		if (success && (await this.shouldAutoCommit(autoCommit))) {
 			const backlogDir = await this.getBacklogDirectoryName();
 			await this.git.stageBacklogDirectory(backlogDir);
-			await this.git.commitChanges(`backlog: Demote task ${taskId}`);
+			await this.git.commitChanges(`backlogsession: Demote task ${taskId}`);
 		}
 
 		return success;
@@ -1240,7 +1240,7 @@ export class Core {
 		if (await this.shouldAutoCommit(autoCommit)) {
 			const backlogDir = await this.getBacklogDirectoryName();
 			await this.git.stageBacklogDirectory(backlogDir);
-			await this.git.commitChanges(`backlog: Add decision ${decision.id}`);
+			await this.git.commitChanges(`backlogsession: Add decision ${decision.id}`);
 		}
 	}
 
@@ -1301,7 +1301,7 @@ export class Core {
 		if (await this.shouldAutoCommit(autoCommit)) {
 			const backlogDir = await this.getBacklogDirectoryName();
 			await this.git.stageBacklogDirectory(backlogDir);
-			await this.git.commitChanges(`backlog: Add document ${doc.id}`);
+			await this.git.commitChanges(`backlogsession: Add document ${doc.id}`);
 		}
 	}
 
@@ -1361,7 +1361,7 @@ export class Core {
 		if (autoCommit) {
 			const backlogDir = await this.getBacklogDirectoryName();
 			await this.git.stageBacklogDirectory(backlogDir);
-			await this.git.commitChanges(`backlog: Initialize backlog project: ${projectName}`);
+			await this.git.commitChanges(`backlogsession: Initialize backlog project: ${projectName}`);
 		}
 	}
 
