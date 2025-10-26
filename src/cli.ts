@@ -9,6 +9,7 @@ import prompts from "prompts";
 import { runAdvancedConfigWizard } from "./commands/advanced-config-wizard.ts";
 import { configureAdvancedSettings } from "./commands/configure-advanced-settings.ts";
 import { registerMcpCommand } from "./commands/mcp.ts";
+import { registerSessionBacklogCommand } from "./commands/session-backlog.ts";
 import { DEFAULT_DIRECTORIES } from "./constants/index.ts";
 import { computeSequences } from "./core/sequences.ts";
 import { formatTaskPlainText } from "./formatters/task-plain-text.ts";
@@ -2984,6 +2985,9 @@ program
 
 // MCP command group
 registerMcpCommand(program);
+
+// Session Backlog command group
+registerSessionBacklogCommand(program);
 
 program.parseAsync(process.argv).finally(() => {
 	// Restore BUN_OPTIONS after CLI parsing completes so it's available for subsequent commands
